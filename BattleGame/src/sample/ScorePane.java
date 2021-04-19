@@ -1,15 +1,11 @@
 package sample;
 
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-
-import java.awt.*;
 
 public class ScorePane extends HBox {
     private int playerOneScore;

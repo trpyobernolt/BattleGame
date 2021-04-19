@@ -3,7 +3,6 @@ package sample;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 
 public class GameControl extends BorderPane {
     private ScorePane scores;
@@ -16,7 +15,6 @@ public class GameControl extends BorderPane {
         reset.setOnAction(e -> reset());
         this.scores = new ScorePane(reset);
         this.game = new GamePane(scores, main);
-        BorderPane textPane = new BorderPane();
         Pane filler = new Pane();
         filler.setPrefWidth(125.0);
         //Filler pane just makes it look pretty
@@ -29,11 +27,9 @@ public class GameControl extends BorderPane {
         //resets a game
         this.scores.resetScores();
         this.game.resetDeck();
-    }
-
-    public void playRound() {
-        // plays one round of game
-        this.game.playRound();
+        setOnMouseClicked(e -> {});
+        this.scores.setOnMouseClicked(e -> {});
+        this.game.setOnMouseClicked(e -> {});
     }
 
 }
